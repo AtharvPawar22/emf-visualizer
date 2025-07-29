@@ -143,7 +143,9 @@ function setupThreeJS() {
     antialias: true,
     alpha: true
   });
-  renderer.setSize(container.clientWidth, container.clientHeight);
+  // renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   container.appendChild(renderer.domElement);
